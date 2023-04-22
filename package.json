@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@parcel/transformer-typescript-tsc": "^2.8.0",
+    "axios": "^1.1.3"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.0",
+    "@parcel/validator-typescript": "^2.8.0",
+    "buffer": "^5.7.1",
+    "parcel": "^2.8.0",
+    "process": "^0.11.10",
+    "typescript": "^4.8.4"
+  },
+  "scripts": {
+    "start": "npx parcel ./src/index.html --no-cache"
+  }
+}

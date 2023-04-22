@@ -1,0 +1,106 @@
+@use "../components/colors" as c;
+@use "../components/breakpoints" as b;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
+html,
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: c.$backgroundColor;
+  overflow-x: hidden;
+}
+
+.movieContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    font-family: 'Rubik Iso', cursive;
+    color: transparent;
+        text-transform: uppercase;
+        background-image: linear-gradient(
+          to left,
+          #1e274ef8,
+          #dfad4281,
+          #e4c644,
+          #000000
+        );
+        background-clip: text;
+        animation: animate 160s linear infinite;
+        background-size: 40;
+        text-align: center;
+      }
+
+      @keyframes animate {
+        0% {
+          background-position: 0 100%;
+        }
+        50% {
+          background-position: 100% 0;
+        }
+        100% {
+          background-position: 0 100%;
+        }
+      }
+    
+  }
+
+
+.searchForm {
+  display: flex;
+  background-color: c.$backgroundColor;
+  justify-content: center;
+  margin-bottom: 55px;
+
+  &__input {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    border: 5px solid c.$inputBorderColor;
+    border-radius: 4%;
+  }
+
+  &__button {
+    background-color: c.$primaryColor;
+    color: c.$secondaryColor;
+    border: 5px solid c.$inputBorderColor;
+    border-radius: 4%;
+    margin-left: 4%;
+  }
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: c.$thirdColor;
+    text-decoration: underline;
+    &:hover {
+      transform: scale(1.4);
+    }
+  }
+
+  &__img {
+    display: flex;
+    font-size: 20%;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+// @include b.medium {
+//   background-color: violet;
+// }
